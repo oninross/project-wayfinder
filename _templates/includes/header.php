@@ -13,22 +13,22 @@
         <meta name="robots" content="follow">
         <meta name="author" content="">
         <meta name="copyright" content="">
-        <meta name="description" content="">
+        <meta name="description" content="Do you need help?">
         <meta name="keywords" content="" />
 
-        <meta property="og:title" content="">
+        <meta property="og:title" content="Information Beacon">
         <meta property="og:type" content="">
         <meta property="og:url" content="">
         <meta property="og:image" content="">
-        <meta property="og:description" content="">
+        <meta property="og:description" content="Do you need help?">
         <meta property="og:site_name" content="">
 
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:creator" content=""/>
         <meta name="twitter:url" content=""/>
 
-        <meta name="twitter:title" content=""/>
-        <meta name="twitter:description" content=""/>
+        <meta name="twitter:title" content="Information Beacon"/>
+        <meta name="twitter:description" content="Do you need help?"/>
         <meta name="twitter:image" content="" />
 
         <link rel="apple-touch-icon" sizes="57x57" href="assets/wayfinder/images/favicon/apple-icon-57x57.png">
@@ -50,25 +50,25 @@
         <meta name="theme-color" content="#1c1c1c">
 
 
-        <!-- build:css /assets/wayfinder/css/main.min.css -->
-        <link href="/assets/wayfinder/css/main.css" rel="stylesheet">
+        <!-- build:css assets/wayfinder/css/main.min.css -->
+        <link href="assets/wayfinder/css/main.css" rel="stylesheet">
         <!-- /build -->
 
         <?php if(!isset($is_table_preview)): ?>
-            <!-- build:css /assets/wayfinder/css/responsive.min.css -->
-            <link href="/assets/wayfinder/css/responsive.css" rel="stylesheet">
+            <!-- build:css assets/wayfinder/css/responsive.min.css -->
+            <link href="assets/wayfinder/css/responsive.css" rel="stylesheet">
             <!-- /build -->
         <?php endif; ?>
 
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
         <!--[if lt IE 9]>
-            <link rel="stylesheet" href = "/assets/wayfinder/css/ie.css">
+            <link rel="stylesheet" href = "assets/wayfinder/css/ie.css">
             <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
         <![endif]-->
 
-        <script src="/assets/wayfinder/js/vendor/modernizr.js"></script>
+        <script src="assets/wayfinder/js/vendor/modernizr.js"></script>
     </head>
     <body>
         <header class="header" role="header">
