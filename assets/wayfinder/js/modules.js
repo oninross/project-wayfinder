@@ -44,6 +44,12 @@ var RR = (function (parent, $) {
 
 
         // Wayfinder Listeners
+        $window.on('resize scroll', debounce(function () {
+            $('#main').css({
+                height: $window.outerHeight() - $('.header').outerHeight()
+            });
+        }, 250)).trigger('resize');
+
         $('.js-open-path').on('click', function (e) {
             e.preventDefault();
 

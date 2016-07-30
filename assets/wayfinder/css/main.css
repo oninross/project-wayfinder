@@ -832,8 +832,10 @@ svg.ripple {
     width: 100%; }
 
 #main {
-  position: relative;
-  margin-top: 60px; }
+  margin-top: 60px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative; }
 
 .backstretch {
   background-size: cover;
@@ -1025,7 +1027,7 @@ svg.ripple {
     padding: 12px 20px 12px 40px; }
 
 .header {
-  height: 46px;
+  height: 60px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -1159,7 +1161,6 @@ svg.ripple {
   perspective: 3500px;
   -webkit-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%;
-  height: 100%;
   position: relative;
   width: 100%; }
 
@@ -1175,7 +1176,7 @@ svg.ripple {
   margin: -5vmin 0 0 -45vmin;
   top: 50%;
   position: absolute;
-  width: 92vmin; }
+  width: 90vmin; }
   .levels--open .level {
     -webkit-transition: -webkit-transform 1s, opacity 1s;
     transition: transform 1s, opacity 1s;
@@ -1183,6 +1184,9 @@ svg.ripple {
     transition-delay: 0s; }
     .levels--open .level.level--current {
       opacity: 1; }
+      .levels--open .level.level--current.level-upper {
+        -webkit-transform: translateZ(5vmin) rotate3d(0, 0, 1, 20deg);
+        transform: translateZ(5vmin) rotate3d(0, 0, 1, 20deg); }
       .levels--open .level.level--current.level-lower {
         -webkit-transform: translateZ(-30vmin) rotate3d(0, 0, 1, 20deg);
         transform: translateZ(-30vmin) rotate3d(0, 0, 1, 20deg); }
@@ -1229,6 +1233,8 @@ svg.ripple {
   .level--current:after {
     -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-2vmin);
     transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-2vmin); }
+  .level--current .path-toilet {
+    animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
   .level.level--current {
     -webkit-transform: translateZ(15vmin) rotate3d(0, 0, 1, 20deg);
     transform: translateZ(15vmin) rotate3d(0, 0, 1, 20deg); }
@@ -1279,13 +1285,27 @@ svg.ripple {
     -webkit-transform: rotateZ(0) rotateZ(45deg) rotateX(-70deg);
     transform: rotateZ(0) rotateZ(45deg) rotateX(-70deg);
     opacity: 1;
-    top: 22vmin;
-    left: 40vmin; }
+    top: 21.25vmin;
+    left: 41.2vmin; }
     .pin--marker .pin__icon {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       opacity: 1; }
 
+.path {
+  left: 0;
+  position: absolute;
+  top: 0; }
+  .path-toilet {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; }
+    .path-toilet-3, .path-toilet-4 {
+      -webkit-animation-delay: 2s !important;
+      animation-delay: 2s !important; }
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0; } }
 .controls {
   top: 60vmin;
   position: relative; }
@@ -1297,7 +1317,7 @@ svg.ripple {
   .controls .btn, .controls .btn-print {
     font-size: 6vmin;
     font-weight: 700;
-    height: 40.625vmin;
+    height: 25vmin;
     padding: 0;
     width: 100%; }
     .controls .btn.colored, .controls .btn-print {
@@ -1792,34 +1812,6 @@ input[type="checkbox"]:checked + label:after {
   transform-origin: center center;
   width: 75%; }
 
-.path {
-  stroke-dasharray: 1,200;
-  stroke-dashoffset: 0;
-  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-  stroke-linecap: round; }
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg); } }
-@keyframes dash {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0; }
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35; }
-  100% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -124; } }
-@keyframes color {
-  100%, 0% {
-    stroke: #f44336; }
-  40% {
-    stroke: #2196f3; }
-  66% {
-    stroke: #4caf50; }
-  80%, 90% {
-    stroke: #ffeb3b; } }
 .toaster-wrap {
   bottom: 30px;
   left: 30px;
