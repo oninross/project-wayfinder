@@ -1,4 +1,4 @@
-/*! wayfinder 2016-07-30 */
+/*! wayfinder 2016-07-31 */
 /* ==========================================================================
 DEPENDENCIES
     --------------------------------------------------------------------------
@@ -807,7 +807,7 @@ button:focus {
 .breadcrumbs, .container {
   height: 100%;
   margin: auto;
-  max-width: 960px;
+  max-width: 768px;
   position: relative;
   width: 100%; }
 
@@ -1152,6 +1152,15 @@ svg.ripple {
 /* =======================================================================
 00 Floors
 ========================================================================== */
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes bridge1 {
+  100% {
+    height: 32vmin; } }
+@keyframes bridge2 {
+  100% {
+    height: 30vmin; } }
 .office {
   -webkit-transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
@@ -1231,10 +1240,14 @@ svg.ripple {
     top: 0;
     left: 0; }
   .level--current:after {
-    -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-2vmin);
-    transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-2vmin); }
+    -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(-2vmin) translateY(-2vmin);
+    transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(-2vmin) translateY(-2vmin); }
   .level--current .path-toilet {
     animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
+  .level--current .bridge-line-1 {
+    animation: bridge1 1.75s forwards cubic-bezier(0.19, 1, 0.22, 1); }
+  .level--current .bridge-line-2 {
+    animation: bridge2 1.75s forwards cubic-bezier(0.19, 1, 0.22, 1); }
   .level.level--current {
     -webkit-transform: translateZ(15vmin) rotate3d(0, 0, 1, 20deg);
     transform: translateZ(15vmin) rotate3d(0, 0, 1, 20deg); }
@@ -1303,9 +1316,32 @@ svg.ripple {
       -webkit-animation-delay: 2s !important;
       animation-delay: 2s !important; }
 
-@keyframes dash {
-  100% {
-    stroke-dashoffset: 0; } }
+.bridge-lines {
+  left: 0;
+  position: absolute;
+  top: 0; }
+.bridge-line {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-color: #f44336;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  z-index: -1; }
+  .bridge-line-1, .bridge-line-2 {
+    -webkit-animation-delay: 1s !important;
+    animation-delay: 1s !important; }
+  .bridge-line-1 {
+    -webkit-transform: rotateX(-90deg) translateY(3vmin);
+    transform: rotateX(-90deg) translateY(3vmin);
+    left: 52px; }
+  .bridge-line-2 {
+    -webkit-transform: rotateX(-120deg) translateY(12vmin);
+    transform: rotateX(-120deg) translateY(12vmin);
+    left: 376px;
+    top: 82px; }
+
 .controls {
   top: 60vmin;
   position: relative; }
