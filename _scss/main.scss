@@ -662,7 +662,7 @@ svg.ripple {
         background-color: #f44336;
         position: absolute;
         height: 0;
-        width: 2px;
+        width: 0.5vmin;
         z-index: -1;
 
         &-1,
@@ -677,7 +677,7 @@ svg.ripple {
                 transform: rotateX(-90deg) translateY(3vmin);
 
             // height: 32vmin;
-            left: 52px;
+            left: 12.75vmin;
         }
 
         &-2 {
@@ -685,8 +685,8 @@ svg.ripple {
                 transform: rotateX(-120deg) translateY(12vmin);
 
             // height: 30vmin;
-            left: 376px;
-            top: 82px;
+            left: 91.5vmin;
+            top: 20vmin;
         }
     }
 }
