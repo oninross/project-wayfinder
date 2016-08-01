@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA;;;;;;;;;;;6EAW6E;AAM7E;;6EAE6E;AAO7E;;6EAE6E",
+"sources": ["../../../../_scss/responsive.scss"],
 "names": [],
 "file": "responsive.css"
 }

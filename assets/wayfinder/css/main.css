@@ -1,4 +1,4 @@
-/*! wayfinder 2016-07-31 */
+/*! wayfinder 2016-08-01 */
 /* ==========================================================================
 DEPENDENCIES
     --------------------------------------------------------------------------
@@ -1327,7 +1327,7 @@ svg.ripple {
   background-color: #f44336;
   position: absolute;
   height: 0;
-  width: 2px;
+  width: 0.5vmin;
   z-index: -1; }
   .bridge-line-1, .bridge-line-2 {
     -webkit-animation-delay: 1s !important;
@@ -1335,12 +1335,12 @@ svg.ripple {
   .bridge-line-1 {
     -webkit-transform: rotateX(-90deg) translateY(3vmin);
     transform: rotateX(-90deg) translateY(3vmin);
-    left: 52px; }
+    left: 12.75vmin; }
   .bridge-line-2 {
     -webkit-transform: rotateX(-120deg) translateY(12vmin);
     transform: rotateX(-120deg) translateY(12vmin);
-    left: 376px;
-    top: 82px; }
+    left: 91.5vmin;
+    top: 20vmin; }
 
 .controls {
   top: 60vmin;
