@@ -31,6 +31,20 @@
         <script src="assets/wayfinder/js/main.js"></script>
         <!-- /build -->
 
+        <!-- pushcrew for push notification -->
+        <script type="text/javascript">
+            (function(p,u,s,h){
+                p._pcq=p._pcq||[];
+                p._pcq.push(['_currentTime',Date.now()]);
+                s=u.createElement('script');
+                s.type='text/javascript';
+                s.async=true;
+                s.src='https://cdn.pushcrew.com/js/0251b63228db211ef5a17681fd17a0d6.js';
+                h=u.getElementsByTagName('script')[0];
+                h.parentNode.insertBefore(s,h);
+            })(window,document);
+        </script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -40,6 +54,5 @@
             // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             // ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-
     </body>
 </html>
