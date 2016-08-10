@@ -1,4 +1,4 @@
-/*! wayfinder 2016-08-01 */
+/*! wayfinder 2016-08-10 */
 /* global RR: true, TweenMax: true, TimelineMax: true, jQuery: true, ripple: true, Ease: true, Expo: true */
 /* jshint unused: false */
 
