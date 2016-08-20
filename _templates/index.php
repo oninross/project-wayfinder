@@ -114,9 +114,9 @@ include('header.php');
                      y="0px" viewBox="0 0 1258.413 557.683" enable-background="new 0 0 1258.413 557.683"
                      xml:space="preserve">
 
-                    <path class="path-toilet path-toilet-1" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,90.901 178.673,90.901 178.673,68.401     "/>
-                    <path class="path-toilet path-toilet-2" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,197.757 201.173,197.757 201.173,246.173  "/>
-                    <path class="path-toilet path-toilet-3" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 1174.731,289.683 1174.731,289.01     "/>
+                    <path class="path-upper-level path-upper-level-1" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,90.901 178.673,90.901 178.673,68.401     "/>
+                    <path class="path-upper-level path-upper-level-2" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 1174.731,289.683 1174.731,289.01     "/>
+                    <path class="path-upper-level path-upper-level-3" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,197.757 201.173,197.757 201.173,246.173  "/>
                 </svg>
 
                 <svg version="1.1" id="level-upper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

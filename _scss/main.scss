@@ -419,25 +419,34 @@ svg.ripple {
     width: 100%;
 
     &.toilet-isActive {
-        .path-toilet {
+        .path-toilet,
+        .path-upper-level-1,
+        .path-upper-level-2 {
             animation: dash 7.5s forwards $easeOutExpo;
         }
     }
 
     &.exit-isActive {
-        .path-exit {
+        .path-exit,
+        .path-upper-level-1,
+        .path-upper-level-2 {
             animation: dash 7.5s forwards $easeOutExpo;
         }
     }
 
     &.heads-isActive {
-        .path-heads {
+        .path-heads,
+        .path-upper-level-1,
+        .path-upper-level-2,
+        .path-upper-level-3 {
             animation: dash 7.5s forwards $easeOutExpo;
         }
     }
 
     &.douchebag-isActive {
-        .path-douchebag {
+        .path-douchebag,
+        .path-upper-level-1,
+        .path-upper-level-2 {
             animation: dash 7.5s forwards $easeOutExpo;
         }
     }
@@ -657,6 +666,7 @@ svg.ripple {
     position: absolute;
     top: 0;
 
+    &-upper-level,
     &-toilet,
     &-exit,
     &-heads,
@@ -717,6 +727,8 @@ svg.ripple {
 }
 
 .controls {
+    @include transition(top, 0.5s, $easeOutExpo);
+
     top: 60vmin;
     position: relative;
 
