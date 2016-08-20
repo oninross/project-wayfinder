@@ -417,6 +417,30 @@ svg.ripple {
     // height: 100%;
     position: relative;
     width: 100%;
+
+    &.toilet-isActive {
+        .path-toilet {
+            animation: dash 7.5s forwards $easeOutExpo;
+        }
+    }
+
+    &.exit-isActive {
+        .path-exit {
+            animation: dash 7.5s forwards $easeOutExpo;
+        }
+    }
+
+    &.heads-isActive {
+        .path-heads {
+            animation: dash 7.5s forwards $easeOutExpo;
+        }
+    }
+
+    &.douchebag-isActive {
+        .path-douchebag {
+            animation: dash 7.5s forwards $easeOutExpo;
+        }
+    }
 }
 
 .levels {
@@ -523,10 +547,6 @@ svg.ripple {
         &:after {
             -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(-2vmin) translateY(-2vmin);
                     transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(-2vmin) translateY(-2vmin);
-        }
-
-        .path-toilet {
-            animation: dash 7.5s forwards $easeOutExpo;
         }
 
         .bridge-line {
@@ -637,12 +657,17 @@ svg.ripple {
     position: absolute;
     top: 0;
 
-    &-toilet {
+    &-toilet,
+    &-exit,
+    &-heads,
+    &-douchebag {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
 
         &-3,
-        &-4 {
+        &-4,
+        &-5,
+        &-6 {
             -webkit-animation-delay: 2s !important;
                     animation-delay: 2s !important;
         }

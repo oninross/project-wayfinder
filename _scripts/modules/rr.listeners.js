@@ -7,6 +7,8 @@
 var RR = (function (parent, $) {
     'use strict';
 
+    var currPath = '';
+
     var setup = function () {
         var $window = $(window),
             $body = $('body'),
@@ -55,16 +57,29 @@ var RR = (function (parent, $) {
             var $this = $(this),
                 data = $this.data('path');
 
-            TweenMax.staggerTo('.controls .col', 0.5, {
-                autoAlpha: 0,
-                scale: 0.75,
-                ease: Expo.easeOut
-            }, 0.1, function() {
-                $('.action').addClass('show');
-                $('.levels').addClass('levels--open');
-                $('.levels .level').addClass('level--current');
-                $('.level__pins').addClass('level__pins--active');
-            });
+            $('.action').addClass('show');
+            $('.levels').addClass('levels--open');
+            $('.levels .level').addClass('level--current');
+            $('.level__pins').addClass('level__pins--active');
+
+            if (currPath !== '') {
+                $('.office').removeClass(currPath + '-isActive').addClass(data + '-isActive');
+            } else {
+                $('.office').addClass(data + '-isActive');
+            }
+
+            currPath = data;
+
+            // TweenMax.staggerTo('.controls .col', 0.5, {
+            //     autoAlpha: 0,
+            //     scale: 0.75,
+            //     ease: Expo.easeOut
+            // }, 0.1, function() {
+            //     $('.action').addClass('show');
+            //     $('.levels').addClass('levels--open');
+            //     $('.levels .level').addClass('level--current');
+            //     $('.level__pins').addClass('level__pins--active');
+            // });
         });
 
         $('.js-close-path').on('click', function (e) {
@@ -78,12 +93,14 @@ var RR = (function (parent, $) {
             var $this = $(this),
                 data = $this.data('path');
 
-            TweenMax.staggerTo('.controls .col', 0.5, {
-                autoAlpha: 1,
-                scale: 1,
-                ease: Expo.easeOut,
-                delay: 0.5
-            }, 0.1);
+            $('.office').removeClass(currPath + '-isActive');
+
+            // TweenMax.staggerTo('.controls .col', 0.5, {
+            //     autoAlpha: 1,
+            //     scale: 1,
+            //     ease: Expo.easeOut,
+            //     delay: 0.5
+            // }, 0.1);
         });
     };
 

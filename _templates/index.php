@@ -24,6 +24,16 @@ include('header.php');
 
                     <path class="path-toilet path-toilet-3" fill="none" stroke="#EF4438" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M178.673,3 178.673,25.5 458.192,25.5 458.192,3 "/>
                     <path class="path-toilet path-toilet-4" fill="none" stroke="#EF4438" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1255.413,25.5 976.558,25.5 976.558,3 "/>
+
+                    <path class="path-exit path-exit-3" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M178.673,3 178.673,25.5 3,25.5 "/>
+                    <path class="path-exit path-exit-4" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1255.413,25.5 1208.913,25.5 1208.913,363.757 1255.413,363.757 "/>
+
+                    <path class="path-heads path-heads-4" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M178.673,3 178.673,25.5 26,25.5 26,246.173 109.01,246.173 109.01,270.837 "/>
+                    <path class="path-heads path-heads-5" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M178.673,3 178.673,25.5 739.875,25.5 739.875,48 "/>
+                    <path class="path-heads path-heads-6" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1255.413,25.5 825.548,25.5 825.548,48 "/>
+
+                    <path class="path-douchebag path-douchebag-3" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M178.673,3 178.673,25.5 458.192,25.5 458.192,93 480.692,93   "/>
+                    <path class="path-douchebag path-douchebag-4" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1255.413,25.5 458.192,25.5 458.192,93   "/>
                 </svg>
 
 
@@ -104,8 +114,9 @@ include('header.php');
                      y="0px" viewBox="0 0 1258.413 557.683" enable-background="new 0 0 1258.413 557.683"
                      xml:space="preserve">
 
-                    <path class="path-toilet path-toilet-1" fill="none" stroke="#EF4438" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,187.902 178.673,187.902 178.673,68.401  "/>
-                    <path class="path-toilet path-toilet-2" fill="none" stroke="#EF4438" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 1174.731,289.683" />
+                    <path class="path-toilet path-toilet-1" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,90.901 178.673,90.901 178.673,68.401     "/>
+                    <path class="path-toilet path-toilet-2" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 588.865,197.757 201.173,197.757 201.173,246.173  "/>
+                    <path class="path-toilet path-toilet-3" fill="none" stroke="#EF4438" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M588.865,289.01 1174.731,289.683 1174.731,289.01     "/>
                 </svg>
 
                 <svg version="1.1" id="level-upper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -171,11 +182,11 @@ include('header.php');
                 </div>
 
                 <div class="col">
-                    <button class="btn flat colored js-open-path" data-path="div-head">Div Heads</button>
+                    <button class="btn flat colored js-open-path" data-path="heads">Div Heads</button>
                 </div>
 
                 <div class="col">
-                    <button class="btn flat colored js-open-path" data-path="toilet">Toilet</button>
+                    <button class="btn flat colored js-open-path" data-path="douchebag">Douchebag</button>
                 </div>
             </div>
         </div>
