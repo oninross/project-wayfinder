@@ -1,4 +1,4 @@
-/*! wayfinder 2016-08-10 */
+/*! wayfinder 2016-08-21 */
 /* ==========================================================================
 DEPENDENCIES
     --------------------------------------------------------------------------
@@ -1172,6 +1172,23 @@ svg.ripple {
   perspective-origin: 0% 50%;
   position: relative;
   width: 100%; }
+  .office.toilet-isActive .path-toilet,
+  .office.toilet-isActive .path-upper-level-1,
+  .office.toilet-isActive .path-upper-level-2 {
+    animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
+  .office.exit-isActive .path-exit,
+  .office.exit-isActive .path-upper-level-1,
+  .office.exit-isActive .path-upper-level-2 {
+    animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
+  .office.heads-isActive .path-heads,
+  .office.heads-isActive .path-upper-level-1,
+  .office.heads-isActive .path-upper-level-2,
+  .office.heads-isActive .path-upper-level-3 {
+    animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
+  .office.douchebag-isActive .path-douchebag,
+  .office.douchebag-isActive .path-upper-level-1,
+  .office.douchebag-isActive .path-upper-level-2 {
+    animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
 
 .levels {
   -webkit-transition: -webkit-transform 0.3s;
@@ -1242,8 +1259,6 @@ svg.ripple {
   .level--current:after {
     -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(-2vmin) translateY(-2vmin);
     transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(-2vmin) translateY(-2vmin); }
-  .level--current .path-toilet {
-    animation: dash 7.5s forwards cubic-bezier(0.19, 1, 0.22, 1); }
   .level--current .bridge-line-1 {
     animation: bridge1 1.75s forwards cubic-bezier(0.19, 1, 0.22, 1); }
   .level--current .bridge-line-2 {
@@ -1309,10 +1324,10 @@ svg.ripple {
   left: 0;
   position: absolute;
   top: 0; }
-  .path-toilet {
+  .path-upper-level, .path-toilet, .path-exit, .path-heads, .path-douchebag {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000; }
-    .path-toilet-3, .path-toilet-4 {
+    .path-upper-level-3, .path-upper-level-4, .path-upper-level-5, .path-upper-level-6, .path-toilet-3, .path-toilet-4, .path-toilet-5, .path-toilet-6, .path-exit-3, .path-exit-4, .path-exit-5, .path-exit-6, .path-heads-3, .path-heads-4, .path-heads-5, .path-heads-6, .path-douchebag-3, .path-douchebag-4, .path-douchebag-5, .path-douchebag-6 {
       -webkit-animation-delay: 2s !important;
       animation-delay: 2s !important; }
 
@@ -1343,6 +1358,14 @@ svg.ripple {
     top: 20vmin; }
 
 .controls {
+  transition-property: top;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  /* Safari */
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: top;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   top: 60vmin;
   position: relative; }
   .controls .col {

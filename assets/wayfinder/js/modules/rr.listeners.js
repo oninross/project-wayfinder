@@ -7,6 +7,8 @@
 var RR = (function (parent, $) {
     'use strict';
 
+    var currPath = '';
+
     var setup = function () {
         var $window = $(window),
             $body = $('body'),
@@ -55,6 +57,8 @@ var RR = (function (parent, $) {
             var $this = $(this),
                 data = $this.data('path');
 
+            currPath = data;
+
             TweenMax.staggerTo('.controls .col', 0.5, {
                 autoAlpha: 0,
                 scale: 0.75,
@@ -64,6 +68,7 @@ var RR = (function (parent, $) {
                 $('.levels').addClass('levels--open');
                 $('.levels .level').addClass('level--current');
                 $('.level__pins').addClass('level__pins--active');
+                $('.office').addClass(currPath + '-isActive');
             });
         });
 
@@ -74,9 +79,7 @@ var RR = (function (parent, $) {
             $('.levels').removeClass('levels--open');
             $('.levels .level').removeClass('level--current');
             $('.level__pins').removeClass('level__pins--active');
-
-            var $this = $(this),
-                data = $this.data('path');
+            $('.office').removeClass(currPath + '-isActive');
 
             TweenMax.staggerTo('.controls .col', 0.5, {
                 autoAlpha: 1,
